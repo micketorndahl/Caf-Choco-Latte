@@ -24,7 +24,7 @@
     kvalitet utan att tumma på rättvisan gentemot kaffe- och kakoodlarna.
   </p>
 
-  <!-- Anvädning av det semantiska elementet nav för beskrivande av navigering -->
+  <!-- Användning av det semantiska elementet nav för beskrivande av navigering -->
   <nav>
     <ul>
       <li><a href="index.html">Hem</a></li>
@@ -38,35 +38,123 @@
 
   </nav>
 
-  <!-- Användning av det semantiska elementen main och section. Main för beskrivandet av huvudinnehåll för den aktuella sidan och section för den specifika sektionen -->
+  <!-- Användning av de semantiska elementen main och section. Main för beskrivandet av huvudinnehåll för den aktuella sidan och section för den specifika sektionen -->
   <main>
     <section>
       <h2>Boka Chokladprovning</h2>
 
-      Välj datum: (radiobuttons)
+      <form>
 
-      30 april
-      2 maj
-      7 maj
-      9 maj
-      14 maj
-      16 maj
+        <fieldset>
+          <legend>Välj datum:</legend>
+
+          <p>
+            <input type="radio"
+                   name="radiobutton1"
+                   id="30april">
+            <label for="30april">30 april</label>
+          </p>
+
+          <p>
+            <input type="radio"
+                   name="radiobutton2"
+                   id="2maj">
+            <label for="2maj">2 maj</label>
+          </p>
+
+          <p>
+            <input type="radio"
+                   name="radiobutton3"
+                   id="7maj">
+            <label for="7maj">7 maj</label>
+          </p>
+
+          <p>
+            <input type="radio"
+                   name="radiobutton4"
+                   id="9maj">
+            <label for="9maj">9 maj</label>
+          </p>
+
+          <p>
+            <input type="radio"
+                   name="radiobutton5"
+                   id="14maj">
+            <label for="14maj">14 maj</label>
+          </p>
 
 
-      Välj antal personer:
-      Dropdown-lista med nummer 1-12
+          <p>
+            <input type="radio"
+                   name="radiobutton6"
+                   id="16maj">
+            <label for="16maj">16 maj</label>
+          </p>
+          <p>
 
-      Fyll i dina uppgifter
-      Namn:
-      Email:
-      Mobilnummer:
+        </fieldset>
 
-      (textruta vid varje etikett)
+        <fieldset>
+          <legend><label for="Antalpersoner">Välj antal personer:</label></legend>
+          <select name="antalpersoner"
+                  id="Antalpersoner">
+            <option value="one">1</option>
+            <option value="two">2</option>
+            <option value="three">3</option>
+            <option value="four">4</option>
+            <option value="five">5</option>
+            <option value="six">6</option>
+            <option value="seven">7</option>
+            <option value="eight">8</option>
+            <option value="nine">9</option>
+            <option value="ten">10</option>
+            <option value="eleven">11</option>
+            <option value="twelve">12</option>
+          </select>
+        </fieldset>
 
-      Meddelande:
-      (textarea)
+        <fieldset>
+          <legend>Fyll i dina uppgifter</legend>
+          <p>
+            <label for="
+              FirstName">Namn:</label>
+            <input type="text"
+                   name="namn"
+                   id="Namn"
+                   required>
+          </p>
 
-      Knapp för Bekräfta bokning
+          <p>
+            <label for="Email">E-mail:</label>
+            <input type="email"
+                   name="email"
+                   id="Email"
+                   required
+                   pattern="\w+@\w+.+\w">
+          </p>
+          <p>
+            <label for="Mobilnummer">Mobilnummer:</label>
+            <input type="tel"
+                   name="mobilnummer"
+                   id="Mobilnummer">
+          </p>
+
+          <p>
+            <label for="Meddelande"> Meddelande:</label>
+            <textarea name="meddelande"
+                      id="Meddelande"
+                      cols="30"
+                      rows="3"></textarea>
+          </p>
+          <p>
+            <input type="submit"
+                   value="Boka">
+
+          </p>
+
+        </fieldset>
+
+      </form>
     </section>
 
   </main>
